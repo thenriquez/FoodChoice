@@ -1,0 +1,188 @@
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  min-height: 400px;
+  flex-direction: column;
+  margin-bottom:100px;
+  background-image: url('/img/Recipes.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+footer{
+  color: #283593;
+  position:fixed;
+  bottom:0;
+  width: 100%;
+  height: 18%
+}
+nav{
+  color: #283593
+}
+main {
+  flex: 1 0 auto;
+}
+label{
+  color: MediumOrchid;
+  font-size: 1.4em;
+}
+.angular-google-map-container {
+  position: absolute;
+  position: relative;
+  width: 1000px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.myEventBtn{
+  opacity: 0.9;
+}
+.goEventBtn{
+  opacity: 1;
+}
+.myEventSearchBtn{
+  text-align: center;
+}
+.form-header {
+  color: #283593;
+  text-align: center;
+}
+.input-field{
+  color: black;
+}
+.createEventText{
+  font-size: 26px;
+}
+.registerForm, .loginForm, .sendForm{
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+  opacity: 0.9;
+}
+.createEventForm{
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+  opacity: 0.9;
+  margin-top: 10vh;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.newEventHeader{
+  color: #283593;
+  text-align: center;
+}
+.send{
+  padding-top: 30px;
+  width: 100%
+}
+.madeBy, .welcome, .reg, .logins{
+  padding-top: 10px;
+  text-align: center;
+}
+.formTextBlack{
+  color: black;
+}
+.cardAcc{
+  height: 450px;
+  width: 400px;
+  margin: auto;
+  margin-top: 100px
+}
+.card-title{
+  text-align: center;
+}
+.blankImg{
+  height: 300px;
+  width: 50px;
+}
+.findMyEvents{
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+  opacity: 0.9;
+  margin-top: 50px;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.myEventResults{
+  border-radius: 5px;
+  border-color: red;
+  background-color: black;
+  opacity: 0.9;
+  width: 700px;
+}
+::-webkit-input-placeholder {
+   color: #283593;
+   font-weight: bold;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: #283593;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #283593;
+}
+:-ms-input-placeholder {
+   color: #283593;
+}
+#formHead{
+color: RED;
+}
+#map_canvas {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  position: relative;
+}
+.formtxt{
+  color: teal;
+}
+input[type=text],
+input[type=text]:focus{
+color: purple;
+border-bottom: 11px solid #39ACA1;
+box-shadow: 0 1px 0 0 white;
+}
+input[type=password],
+input[type=password]:focus{
+color: darkblue;
+border-bottom: 11px solid #39ACA1;
+box-shadow: 0 1px 0 0 white;
+}
+input[type=email],
+input[type=email]:focus{
+  color: darkblue;
+  border-bottom: 11px solid #39ACA1;
+  box-shadow: 0 1px 0 0 white;
+
+}
+input[type=tel],
+input[type=tel]:focus{
+  color: darkblue;
+  border-bottom: 11px solid #39ACA1;
+  box-shadow: 0 1px 0 0 white;
+
+}
+#input-field {
+  background-color: BlanchedAlmond;
+}
+span.ng-binding:{
+  font-size: 1.2em;
+  colr-red;
+}
+.event-img {
+  width: 200px;
+   height: 100px;
+ }
+ .btn-block{
+   display: block;
+   width: 100%;
+ }
+#facebook-btn {
+    background-color: blue;
+}

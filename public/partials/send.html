@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+
+    <div ng-hide="submitted">
+      <h3 class="send">Want to eat with your friends? Send them a text!</h3>
+      <form ng-submit="sms()" class="sendForm">
+        <div ng-repeat="number in numbers">
+          <input type="text" placeholder="11234567891" ng-model="number.phoneNum">
+        </div>
+        <button type="button" class="btn" ng-click="addNum()">Add Numbers</button>
+        <button type="button" class="btn" ng-click="subNum()">Less Numbers</button>
+        <button class="btn btn-default" type="submit" name="button">Submit</button>
+      </form>
+    </div>
+
+    <div class="col s12" ng-show="submitted">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Your friends should be recieving a message soon, thanks!</span>
+          <div class="card-action">
+            <a href="/myaccount">My Account</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

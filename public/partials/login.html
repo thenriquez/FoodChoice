@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col m12" ng-show="message !== ''">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <p>{{ message }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col m6 offset-m3">
+    <h1 class="form-header">Login</h1>
+    <div class="loginForm z-depth-5">
+      <form ng-submit="login()" >
+        <div class="form-group">
+          <label for=""> <i class="material-icons">account_circle</i>User Name</label>
+          <input type="text" id=""  name="username" ng-model="user.username">
+        </div>
+        <br>
+        <div class="form-group">
+          <label for=""><i class="material-icons">https</i>Password</label>
+          <input type="password"  ng-model="user.password">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-block">Login</button>
+      </form>
+      <br>
+      <a href='/facebook' class="btn btn-block" id="facebook-btn"><span class="fa fa-facebook"></span> Facebook</a>
+    </div>
+
+  </div>
+</div>

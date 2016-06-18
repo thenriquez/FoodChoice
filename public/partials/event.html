@@ -1,0 +1,57 @@
+  <div class="row">
+    <form ng-submit="findMyEvents()" class="findMyEvents col s12">
+      <h1 class="form-header">Search Events</h1>
+      <br>
+      <button class="myEventSearchBtn btn btn-block" ng-click='ShowAllEvents()' type="button">Show All</button>
+      <div class="form-group ">
+        <div class="col s6">
+          <h5 class="center-align form-header">Number of Events</h5>
+          <p class="range-field">
+            <input type="text" class="center-align" ng-model='search.limit'name="name" value="">
+            <input type="range" ng-model="search.limit" min="0" max="20" />
+          </p>
+        </div>
+        <div class="col s6">
+          <p>
+            <h5 class="center-align form-header">Search by location</h5>
+            <input type="text" class="center-align" ng-model='search.location' name="name" value="">
+          </p>
+        </div>
+      </div>
+      <br>
+      <button class="myEventSearchBtn btn btn-block" type="submit">Search</button>
+    </form>
+
+    <div ng-repeat="event in events"  class="col s12 myEventResults">
+      <table >
+        <tbody>
+          <tr>
+            <td >
+              <a href="#"><span >Event Name :{{event.name}} {{event.eventUrl}}</span></a>
+            </td>
+            </tr>
+            <tr>
+            <td >
+              <a href="#"><span ng-repeat='attendee in event.attendees' >AttendeeS: {{attendee.name}}</span></a>
+            </td>
+            </tr>
+            <tr>
+            <td >
+              <a href="#"><span ng-repeat='place in event.places' >places : {{place.name}}</span></a>
+            </td>
+          </tr>
+          <!-- <tr>
+            <td>
+              <a href="#"><button class="event-img" type="button" name="button">{{events.name}}</button></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#"><button class="event-img" type="button" name="button">{{events.name}}</button></a>
+            </td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+
+  </div>

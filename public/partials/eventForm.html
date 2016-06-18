@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col s12" ng-hide="submitted">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">{{event.name}}</span>
+          <p>Please select where you would like to eat below...</p><br>
+          <form ng-submit="submit()">
+            <div ng-repeat="place in event.places">
+              <p>{{place.name}}</p>
+              <div class="chip" ng-repeat="category in place.categories">{{category}}</div>
+              <p>
+                <input name="{{place.name}}" type="radio" id="input{{place.$$hashKey}}1" value="1" ng-model="form[$index]"/>
+                <label for="input{{place.$$hashKey}}1">Yes</label>
+                <input name="{{place.name}}" type="radio" id="input{{place.$$hashKey}}2" value="0" ng-model="form[$index]"/>
+                <label for="input{{place.$$hashKey}}2">No</label>
+                <input name="{{place.name}}" type="radio" id="input{{place.$$hashKey}}3" value="-10" ng-model="form[$index]"/>
+                <label for="input{{place.$$hashKey}}3">Allergic</label>
+              </p>
+              <br>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12" ng-show="submitted">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Thank you for your submission!</span>
+          <div class="card-action">
+            <a href="/register" ng-hide="authenticated">Register for FwF!</a>
+            <a href="/login" ng-hide="authenticated">Login</a>
+            <a href="/myaccount" ng-show="authenticated">My Account</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

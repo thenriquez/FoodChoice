@@ -1,0 +1,26 @@
+<div class="row">
+
+  <div class="col s12">
+    <div class="card light-blue darken-1">
+      <div ng-hide="current_user" class="card-content white-text welcome">
+        <span class="card-title">Welcome To Food With Friends!</span>
+        <p>Our goal is to make meeting with your friends to get a bite to eat, hassle free.</p>
+        <br>
+        <br>
+        <br>
+        <a href="/register" class="waves-effect waves-light btn orange darken-2">Register</a>
+        <a href="/login" ng-hide="current_user" class="waves-effect waves-light btn orange darken-2">Login</a>
+      </div>
+      <div ng-show='current_user' class="card-content white-text welcome">
+        <h4>Welcome, {{current_user}}</h4>
+        <span>What are ya waiting for?! &nbsp Create an event!</span>
+        <br>
+        <br>
+        <br>
+        <a href="/newEvent" class="waves-effect waves-light btn orange darken-2">Create Event</a>
+        <a href="/myEvents" class="waves-effect waves-light btn orange darken-2">My Events</a>
+      </div>
+    </div>
+  </div>
+
+</div>

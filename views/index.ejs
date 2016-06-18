@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Food With Friends</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.js"></script>
+  <script src="https://rawgit.com/nmccready/angular-simple-logger/master/dist/angular-simple-logger.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+  <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDcaTjAeuU6Qb7DNvUy0i-MldMRfh0K3uk'></script>
+  <script src="https://rawgit.com/angular-ui/angular-google-maps/2.3.2/dist/angular-google-maps.min.js"></script>
+  <script src="https://rawgithub.com/GoDisco/ngFacebook/master/ngFacebook.js"></script>
+  <script src="/js/all.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="/css/main.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!--Let browser know website is optimized for mobile-->
+</head>
+<body ng-app="mainApp">
+  <nav class="indigo darken-3">
+    <div ng-hide="current_user" class="navbar-fixed">
+      <a href="/" class="brand-logo">Food With Friends</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="login">Login</a></li>
+        <li><a href="register">Register</a></li>
+      </ul>
+    </div>
+    <div ng-show="current_user" class="nav-wrapper">
+      <a href="/" class="brand-logo">Food With Friends</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="newEvent">Create Event</a></li>
+        <li><a href="/map">Map</a></li>
+        <li><a href="event">Search Events</a></li>
+        <li><a href="/myaccount">Account</a></li>
+        <li><a href="/myEvents">My Events</a></li>
+        <li><a href="logout" target="_self">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div ng-view>
+      <!-- Partials Render Here -->
+    </div>
+  </div>
+    <footer class="page-footer indigo darken-3">
+      <div class="container">
+        <div class="row">
+          <div class="col l12 s12 madeBy">
+            <h5 class="white-text">Food with friends was created with hunger by</h5>
+            <p class="grey-text text-lighten-4">Alex Giordano, Long Phan, Tammer Galal, and Terrence Henriquez</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  </body>
+</html>

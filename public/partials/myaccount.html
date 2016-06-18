@@ -1,0 +1,18 @@
+<div class="card cardAcc">
+  <div class="cardCenter card-image waves-effect waves-block waves-light">
+    <img class="activator blankImg" src="img/avatar.jpeg">
+  </div>
+  <div class="card-content">
+    <span class="card-title activator grey-text text-darken-4">Welcome {{current_user}}!<i class="material-icons right">more_vert</i></span>
+    <p class='createEventText'><a href="/newEvent" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>Create an Event</p>
+
+  </div>
+  <div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">Here are some details on your account, {{users.firstName}} {{users.lastName}}<i class="material-icons right">close</i></span>
+    <p>Here is some more information about your activity on the app!</p>
+    <ul>
+      <li>Date Joined: {{users.createdAt | date: longDate}}</li>
+      <li>Events Created:<a href="/myEvents" class="waves-effect waves-light btn indigo darken-2 myEventBtn">My Events</a></li>
+    </ul>
+  </div>
+</div>

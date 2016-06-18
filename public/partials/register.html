@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col m12" ng-repeat="err in message">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <p>{{ err.message }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col m6 offset-m3">
+    <h1 class="form-header">Register</h1>
+    <form ng-submit="register()" class="registerForm z-depth-5">
+      <div class="formTextBlack">
+        <strong><label for=""><i class="material-icons">account_box</i>UserName</label></strong>
+        <input type="text" class="validate"  ng-model="user.username">
+      </div>
+      <br>
+      <div class="formTextBlack">
+        <strong><label for=""><i class="material-icons">https</i>Password</label></strong>
+        <input type="password" class="validate" ng-model="user.password">
+      </div>
+      <br>
+      <div class="formTextBlack">
+        <strong><label for=""><i class="material-icons">perm_identity</i>First Name</label></strong>
+        <input type="text" class="validate" ng-model="user.firstName">
+      </div>
+      <br>
+      <div class="formTextBlack">
+        <strong><label for=""><i class="material-icons">perm_identity</i>Last Name</label></strong>
+        <input type="text" class="validate" ng-model="user.lastName">
+      </div>
+      <br>
+      <div class="formTextBlack">
+        <strong><label for=""><i class="material-icons">email</i>Email</label></strong>
+        <input type="email" class="validate"  ng-model="user.email">
+      </div>
+      <br>
+      <button type="submit" class="btn btn-block">Register</button>
+    </form>
+  </div>
+
+</div>
